@@ -1,7 +1,6 @@
 from app import app
 from models import db, Cupcake
 
-
 db.drop_all()
 db.create_all()
 
@@ -20,3 +19,5 @@ c2 = Cupcake(
 
 db.session.add_all([c1, c2])
 db.session.commit()
+
+print("Cupcakes added to the database")
